@@ -1,4 +1,4 @@
-const _Date = Date;
+import _Date from './original-date';
 
 export default class Date extends _Date {
 	static get [Symbol.species] () {
