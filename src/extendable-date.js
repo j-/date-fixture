@@ -1,5 +1,7 @@
 import _Date from './original-date';
 
+const VALUE = Symbol('value');
+
 export default class Date extends _Date {
 	static get [Symbol.species] () {
 		return _Date;
@@ -18,205 +20,206 @@ export default class Date extends _Date {
 	}
 
 	constructor (year, month, day, hour, minutes, seconds, milliseconds) {
-		super(year, month, day, hour, minutes, seconds, milliseconds);
+		super();
+		this[VALUE] = new _Date(...arguments);
 	}
 
 	/* Getter */
 
 	getDate () {
-		return _Date.prototype.getDate.call(this);
+		return this[VALUE].getDate();
 	}
 
 	getDay () {
-		return _Date.prototype.getDay.call(this);
+		return this[VALUE].getDay();
 	}
 
 	getFullYear () {
-		return _Date.prototype.getFullYear.call(this);
+		return this[VALUE].getFullYear();
 	}
 
 	getHours () {
-		return _Date.prototype.getHours.call(this);
+		return this[VALUE].getHours();
 	}
 
 	getMilliseconds () {
-		return _Date.prototype.getMilliseconds.call(this);
+		return this[VALUE].getMilliseconds();
 	}
 
 	getMinutes () {
-		return _Date.prototype.getMinutes.call(this);
+		return this[VALUE].getMinutes();
 	}
 
 	getMonth () {
-		return _Date.prototype.getMonth.call(this);
+		return this[VALUE].getMonth();
 	}
 
 	getSeconds () {
-		return _Date.prototype.getSeconds.call(this);
+		return this[VALUE].getSeconds();
 	}
 
 	getTime () {
-		return _Date.prototype.getTime.call(this);
+		return this[VALUE].getTime();
 	}
 
 	getTimezoneOffset () {
-		return _Date.prototype.getTimezoneOffset.call(this);
+		return this[VALUE].getTimezoneOffset();
 	}
 
 	getUTCDate () {
-		return _Date.prototype.getUTCDate.call(this);
+		return this[VALUE].getUTCDate();
 	}
 
 	getUTCDay () {
-		return _Date.prototype.getUTCDay.call(this);
+		return this[VALUE].getUTCDay();
 	}
 
 	getUTCFullYear () {
-		return _Date.prototype.getUTCFullYear.call(this);
+		return this[VALUE].getUTCFullYear();
 	}
 
 	getUTCHours () {
-		return _Date.prototype.getUTCHours.call(this);
+		return this[VALUE].getUTCHours();
 	}
 
 	getUTCMilliseconds () {
-		return _Date.prototype.getUTCMilliseconds.call(this);
+		return this[VALUE].getUTCMilliseconds();
 	}
 
 	getUTCMinutes () {
-		return _Date.prototype.getUTCMinutes.call(this);
+		return this[VALUE].getUTCMinutes();
 	}
 
 	getUTCMonth () {
-		return _Date.prototype.getUTCMonth.call(this);
+		return this[VALUE].getUTCMonth();
 	}
 
 	getUTCSeconds () {
-		return _Date.prototype.getUTCSeconds.call(this);
+		return this[VALUE].getUTCSeconds();
 	}
 
 	getYear () {
-		return _Date.prototype.getYear.call(this);
+		return this[VALUE].getYear();
 	}
 
 	/* Setter */
 
 	setDate (...args) {
-		return _Date.prototype.setDate.apply(this, args);
+		return this[VALUE].setDate(...args);
 	}
 
 	setFullYear (...args) {
-		return _Date.prototype.setFullYear.apply(this, args);
+		return this[VALUE].setFullYear(...args);
 	}
 
 	setHours (...args) {
-		return _Date.prototype.setHours.apply(this, args);
+		return this[VALUE].setHours(...args);
 	}
 
 	setMilliseconds (...args) {
-		return _Date.prototype.setMilliseconds.apply(this, args);
+		return this[VALUE].setMilliseconds(...args);
 	}
 
 	setMinutes (...args) {
-		return _Date.prototype.setMinutes.apply(this, args);
+		return this[VALUE].setMinutes(...args);
 	}
 
 	setMonth (...args) {
-		return _Date.prototype.setMonth.apply(this, args);
+		return this[VALUE].setMonth(...args);
 	}
 
 	setSeconds (...args) {
-		return _Date.prototype.setSeconds.apply(this, args);
+		return this[VALUE].setSeconds(...args);
 	}
 
 	setTime (...args) {
-		return _Date.prototype.setTime.apply(this, args);
+		return this[VALUE].setTime(...args);
 	}
 
 	setUTCDate (...args) {
-		return _Date.prototype.setUTCDate.apply(this, args);
+		return this[VALUE].setUTCDate(...args);
 	}
 
 	setUTCFullYear (...args) {
-		return _Date.prototype.setUTCFullYear.apply(this, args);
+		return this[VALUE].setUTCFullYear(...args);
 	}
 
 	setUTCHours (...args) {
-		return _Date.prototype.setUTCHours.apply(this, args);
+		return this[VALUE].setUTCHours(...args);
 	}
 
 	setUTCMilliseconds (...args) {
-		return _Date.prototype.setUTCMilliseconds.apply(this, args);
+		return this[VALUE].setUTCMilliseconds(...args);
 	}
 
 	setUTCMinutes (...args) {
-		return _Date.prototype.setUTCMinutes.apply(this, args);
+		return this[VALUE].setUTCMinutes(...args);
 	}
 
 	setUTCMonth (...args) {
-		return _Date.prototype.setUTCMonth.apply(this, args);
+		return this[VALUE].setUTCMonth(...args);
 	}
 
 	setUTCSeconds (...args) {
-		return _Date.prototype.setUTCSeconds.apply(this, args);
+		return this[VALUE].setUTCSeconds(...args);
 	}
 
 	setYear (...args) {
-		return _Date.prototype.setYear.apply(this, args);
+		return this[VALUE].setYear(...args);
 	}
 
 	/* Conversion getter */
 
 	toDateString () {
-		return _Date.prototype.toDateString.call(this);
+		return this[VALUE].toDateString();
 	}
 
 	toISOString () {
-		return _Date.prototype.toISOString.call(this);
+		return this[VALUE].toISOString();
 	}
 
 	toJSON () {
-		return _Date.prototype.toJSON.call(this);
+		return this[VALUE].toJSON();
 	}
 
 	toGMTString () {
-		return _Date.prototype.toGMTString.call(this);
+		return this[VALUE].toGMTString();
 	}
 
 	toLocaleDateString () {
-		return _Date.prototype.toLocaleDateString.call(this);
+		return this[VALUE].toLocaleDateString();
 	}
 
 	toLocaleFormat () {
-		return _Date.prototype.toLocaleFormat.call(this);
+		return this[VALUE].toLocaleFormat();
 	}
 
 	toLocaleString () {
-		return _Date.prototype.toLocaleString.call(this);
+		return this[VALUE].toLocaleString();
 	}
 
 	toLocaleTimeString () {
-		return _Date.prototype.toLocaleTimeString.call(this);
+		return this[VALUE].toLocaleTimeString();
 	}
 
 	toSource () {
-		return _Date.prototype.toSource.call(this);
+		return this[VALUE].toSource();
 	}
 
 	toString () {
-		return _Date.prototype.toString.call(this);
+		return this[VALUE].toString();
 	}
 
 	toTimeString () {
-		return _Date.prototype.toTimeString.call(this);
+		return this[VALUE].toTimeString();
 	}
 
 	toUTCString () {
-		return _Date.prototype.toUTCString.call(this);
+		return this[VALUE].toUTCString();
 	}
 
 	valueOf () {
-		return _Date.prototype.valueOf.call(this);
+		return this[VALUE];
 	}
 
 }
