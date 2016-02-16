@@ -21,7 +21,7 @@ export default function buildDate (value) {
 		constructor (year, month, day, hour, minutes, seconds, milliseconds) {
 			super();
 			this[VALUE] = new _Date(value);
-			this.setTime(...args);
+			this.setTime(...arguments);
 		}
 	}
 }
