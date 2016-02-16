@@ -15,6 +15,10 @@ export default class Date extends _Date {
 		return _Date.parse(...args);
 	}
 
+	static toString () {
+		return 'function Date() { [native code] }';
+	}
+
 	static UTC (...args) {
 		return _Date.UTC(...args);
 	}

@@ -14,4 +14,8 @@ describe('ExtendableDate', function () {
 	it('has the right class name', function () {
 		assert.equal(ExtendableDate.name, 'Date', 'Get name');
 	});
+	it('returns the right strings', function () {
+		assert.equal(String(ExtendableDate), 'function Date() { [native code] }', 'Object.prototype.toString.call()');
+		assert.equal(Object.prototype.toString.call(ExtendableDate), '[object Function]', 'String()');
+	});
 });
