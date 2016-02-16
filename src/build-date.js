@@ -2,7 +2,7 @@ import _Date from './extendable-date';
 
 const VALUE = Symbol('value');
 
-function buildDate (value) {
+export default function buildDate (value) {
 	// Ensure input is a date
 	value = new _Date(value);
 	// Current datetime
