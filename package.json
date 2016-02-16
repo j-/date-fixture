@@ -1,0 +1,22 @@
+{
+  "name": "date-fixture",
+  "version": "0.0.0",
+  "description": "Mock the native JS Date object for tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "date",
+    "time",
+    "datetime",
+    "mock",
+    "clock",
+    "tick",
+    "test",
+    "tests",
+    "unit"
+  ],
+  "author": "Jamie Hoeks <j@skeoh.com>",
+  "license": "MIT"
+}
