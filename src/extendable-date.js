@@ -5,15 +5,15 @@ export default class Date extends _Date {
 		return _Date;
 	}
 
-	static function now (...args) {
+	static now (...args) {
 		return _Date.now(...args);
 	}
 
-	static function parse (...args) {
+	static parse (...args) {
 		return _Date.parse(...args);
 	}
 
-	static function UTC (...args) {
+	static UTC (...args) {
 		return _Date.UTC(...args);
 	}
 
@@ -187,7 +187,7 @@ export default class Date extends _Date {
 		return _Date.prototype.toLocaleDateString.call(this);
 	}
 
-	toLocaleFormat () {}
+	toLocaleFormat () {
 		return _Date.prototype.toLocaleFormat.call(this);
 	}
 
