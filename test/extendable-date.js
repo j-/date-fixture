@@ -11,4 +11,7 @@ describe('ExtendableDate', function () {
 	it('is an instance of Date', function () {
 		assert.equal(new ExtendableDate() instanceof Date, true, 'Check instanceof');
 	});
+	it('has the right class name', function () {
+		assert.equal(ExtendableDate.name, 'Date', 'Get name');
+	});
 });
